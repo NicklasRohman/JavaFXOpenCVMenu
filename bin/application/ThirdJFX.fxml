@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ThirdController">
+	<right>
+		<VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+			<children>
+				<ImageView fx:id="antitransformedImage" fitHeight="132.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+				<ImageView fx:id="transformedImage" fitHeight="95.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+			</children>
+		</VBox>
+	</right>
+	<left>
+		<VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+			<children>
+				<ImageView fx:id="originalImage" fitHeight="168.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+			</children>
+		</VBox>
+	</left>
+	<bottom>
+		<HBox alignment="BOTTOM_CENTER" prefHeight="51.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+			<children>
+				<Button alignment="center" onAction="#loadImage" text="Load Image" />
+				<Button fx:id="transformButton" alignment="center" disable="true" onAction="#transformImage" text="Apply transformation" />
+				<Button fx:id="antitransformButton" alignment="center" disable="true" onAction="#antitransformImage" text="Apply anti transformation" />
+			</children>
+		</HBox>
+	</bottom>
+</BorderPane>
